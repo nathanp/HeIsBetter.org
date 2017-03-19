@@ -1,6 +1,6 @@
-# Victor Hugo
+# He Is Better
 
-**A [Hugo](https://gohugo.io/) boilerplate for creating truly epic websites**
+**Based on the Victor Hugo boilerplate for creating truly epic websites**
 
 This is a boilerplate for using Hugo as a static site generator and Gulp + Webpack as your
 asset pipeline.
