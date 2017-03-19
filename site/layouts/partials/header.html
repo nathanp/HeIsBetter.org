@@ -1,7 +1,6 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Hugo with Gulp and Webpack</title>
-    <link rel="stylesheet" href="/css/main.css"/>
-  </head>
-  <body>
+    <header id="site-header">
+        <div class="container">
+            <a href="{{ .Site.BaseURL }}" alt="{{ .Site.Title }}"><h1 class="blog-title heading">{{ .Site.Title }}</h1></a>
+            <p class="blog-description">{{ .Site.Params.description }}</p>
+        </div>
+    </header>
