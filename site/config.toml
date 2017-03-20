@@ -3,7 +3,9 @@ languageCode = "en-us"
 title = "He Is Better"
 
 [params]
-	description = "There is a better way. His name is Jesus."
+	verse = "For what does it profit a man to gain the whole world and forfeit his soul?"
+	reference = "Mark 8:36"
+
 
 [[menu.main]]
     name = "Home"
