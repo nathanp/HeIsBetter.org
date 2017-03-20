@@ -1,10 +1,28 @@
+<!DOCTYPE HTML>
+<html>
     <head>
+        <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+
         {{ partial "meta.html" . }}
-        <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+
         <link rel="canonical" href="{{ .Site.BaseURL }}" />
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ .RSSLink }}">
-        <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/main.css"/>
-        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700" rel="stylesheet" type="text/css">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        {{ .Hugo.Generator }}
+
+        {{ "<!--[if lte IE 8]>" | safeHTML }}<script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script>{{ "<![endif]-->" | safeHTML}}
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        {{ "<!--[if lte IE 8]>" | safeHTML }}<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/ie8.css">{{ "<![endif]-->" | safeHTML}}
+
+        {{ with .RSSLink }}
+            <link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+            <link href="{{ . }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+        {{ end }}
+        
+        
+        <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/detox.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700" rel="stylesheet" type="text/css">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
     </head>

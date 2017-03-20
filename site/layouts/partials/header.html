@@ -1,3 +1,13 @@
+	{{ with .Site.Menus.main }}
+		<nav id="sidebar">
+			<ul>
+			{{ range . }}
+				<li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+			{{ end }}
+			</ul>
+		</nav>
+	{{ end }}
+
     <header id="site-header">
         <div class="container">
             <a href="{{ .Site.BaseURL }}" alt="{{ .Site.Title }}"><h1 class="blog-title heading">{{ .Site.Title }}</h1></a>

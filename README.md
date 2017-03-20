@@ -9,6 +9,8 @@ It's setup to use post-css and babel for CSS and JavaScript.
 
 This project is released under the [MIT license](LICENSE). Please make sure you understand its implications and guarantees.
 
+Based on the Detox theme.
+
 ## Usage
 
 Be sure that you have the latest node, npm and [Hugo](https://gohugo.io/) installed. If you need to install hugo on OSX, run:

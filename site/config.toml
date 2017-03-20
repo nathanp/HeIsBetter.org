@@ -3,4 +3,14 @@ languageCode = "en-us"
 title = "He Is Better"
 
 [params]
-	description = "He is indeed better"
+	description = "There is a better way. His name is Jesus."
+
+[[menu.main]]
+    name = "Home"
+    url  = "/"
+    weight = 5
+
+[[menu.main]]
+    name = "About"
+    url  = "about"
+    weight = 0
